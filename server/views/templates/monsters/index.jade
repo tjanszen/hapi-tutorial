@@ -1,0 +1,6 @@
+extends ../../layouts/master
+block content
+  h1 Monsters
+  ul
+    each m in monsters
+      li The monster #{m.name} kill with his #{m.weapon} and has #{m.hp} hitpoints.

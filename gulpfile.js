@@ -7,6 +7,7 @@ var copy = require('gulp-copy');
 
 var paths = {
   jadesrc: ['./client/**/*.jade'],
+  viewssrc: ['./server/views/**/*.jade'],
   lesssrc: ['./client/**/*.less'],
   codesrc: ['./client/**/*.js', './server/**/*.js'],
   clientsrc: ['./client/**/*.js', './client/**/*.mp3', './client/**/*.jpg', './client/**/*.wav', './client/**/*.png'],
@@ -53,6 +54,7 @@ gulp.task('copy', function() {
 });
 
 gulp.task('watch', function() {
+  gulp.watch(paths.viewssrc, ['jade']);
   gulp.watch(paths.jadesrc, ['jade']);
   gulp.watch(paths.lesssrc, ['less']);
   gulp.watch(paths.codesrc, ['lint', 'jscs', 'copy']);

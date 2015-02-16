@@ -15,7 +15,7 @@
   },
   "version": "1.0.0",
   "scripts": {
-    "start": "PORT=3333 nodemon server/index.js",
+    "start": "MONGO_URL=mongodb://localhost/ht PORT=3333 nodemon server/index.js",
     "clean": "rm -rf node_modules && rm -rf public && npm install && bower install && gulp build"
   },
   "license": "MIT",
@@ -23,7 +23,9 @@
     "good": "^5.1.1",
     "good-console": "^4.1.0",
     "hapi": "^8.2.0",
-    "jade": "^1.9.2"
+    "jade": "^1.9.2",
+    "joi": "^5.1.0",
+    "mongoose": "^3.8.23"
   },
   "devDependencies": {
     "gulp": "^3.8.10",

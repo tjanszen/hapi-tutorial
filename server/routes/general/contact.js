@@ -1,5 +1,7 @@
+'use strict';
+
 module.exports = {
   handler: function(request, reply) {
-    reply('wolf!');
+    reply.view('templates/general/contact');
   }
 };
